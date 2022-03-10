@@ -13,6 +13,6 @@ lab_raster(raster)
 The function returns a raster stack object with three layers: L*,a* and b*
 }
 \description{
-This function takes as input an hyperspectral image and calculates the corresponding L*a*b* parameters for each pixel, result in a stack of three images corresponding the each of the  L*a*b* parameters
+This function takes as input an hyperspectral image and calculates the corresponding L*a*b* parameters for each pixel, result in a stack of three images corresponding the each of the  L*a*b* parameters. (TODO- add calculations for HUE and Chroma values)
 }
 \keyword{external}

@@ -3,7 +3,7 @@ Type: Package
 Title: Extracting L*a*b* parameters from hyperspectral data
 Version: 0.1.0
 Authors@R: c(person("Jesus", "Bruno", , "bmjesus@gmail.com", c("aut","cre")))
-Description: Extracting L*a*b* parameters from hyperspectral data
+Description: Extracting XYZ and L*a*b* parameters from hyperspectral data
 License: BSD
 Encoding: UTF-8
 LazyData: true

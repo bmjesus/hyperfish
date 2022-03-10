@@ -1,5 +1,5 @@
 #' @title Construct L*a*b* images from a reflectance spectra
-#' @description This function takes a reflectance spectra (R object ot file) as an input and calculates the corresponding L*a*b* parameters. TO DO - add info about the models and illuminants used to estimate XYZ and L*a*b*.
+#' @description This function takes a reflectance spectra (R object ot file) as an input and calculates the corresponding L*a*b* parameters. TO DO - add info about the models and illuminants used to estimate XYZ and L*a*b*.  (TODO- add calculations for HUE and Chroma values)
 #' @param wl vector with the wavelengths
 #' @param spectra vector with the reflectance data
 #' @param file string with the path for an ASD reflectance file
@@ -34,6 +34,10 @@ spec_camera_xyz<-colorSpec::product(colorSpec::D65.1nm, spec_camera, colorSpec::
 
 #calculating the L*a*b* parameters using a D65 illuminant
 spec_camera_lab<-spacesXYZ::LabfromXYZ( spec_camera_xyz/100, spacesXYZ::standardXYZ( 'D65' ))
+
+#TO_DO section for the HUE and Chroma calculations
+
+
 
 #output section
 output<-list(as.data.frame(spec_camera),spec_camera_xyz,spec_camera_lab)

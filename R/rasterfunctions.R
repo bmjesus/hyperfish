@@ -1,5 +1,5 @@
 #' @title Construct L*a*b* images from an hyperspectral camera
-#' @description This function takes as input an hyperspectral image and calculates the corresponding L*a*b* parameters for each pixel, result in a stack of three images corresponding the each of the  L*a*b* parameters
+#' @description This function takes as input an hyperspectral image and calculates the corresponding L*a*b* parameters for each pixel, result in a stack of three images corresponding the each of the  L*a*b* parameters. (TODO- add calculations for HUE and Chroma values)
 #' @param raster Raster object with the camera file
 #' @return The function returns a raster stack object with three layers: L*,a* and b*
 #' @keywords external
@@ -27,7 +27,12 @@ spec_camera_xyz<-colorSpec::product(colorSpec::D65.1nm, spec_camera, colorSpec::
 spec_camera_lab<-spacesXYZ::LabfromXYZ( spec_camera_xyz/100, spacesXYZ::standardXYZ( 'D65' ))
 
 
+
+#TO_DO section for the HUE and Chroma calculations
+
+
 return(spec_camera_lab) #returns the L*a*b* parameters
+
 
 }
 

@@ -17,6 +17,6 @@ lab_function(wl = NA, spectra = NA, file = NA)
 The function returns a list with: 1) a dataframe with the input data (wl and spectra); 2) a vector with the XYZ parameters; and 3) a vector with the L*a*b* parameters
 }
 \description{
-This function takes a reflectance spectra (R object ot file) as an input and calculates the corresponding L*a*b* parameters. TO DO - add info about the models and illuminants used to estimate XYZ and L*a*b*.
+This function takes a reflectance spectra (R object ot file) as an input and calculates the corresponding L*a*b* parameters. TO DO - add info about the models and illuminants used to estimate XYZ and L*a*b*.  (TODO- add calculations for HUE and Chroma values)
 }
 \keyword{external}
