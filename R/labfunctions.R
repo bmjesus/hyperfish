@@ -32,17 +32,32 @@ plot(spec_camera)
 #calculating the XYZ parameters using the D65 illuminant and the human vision model XYZ 1931 1nm
 spec_camera_xyz<-colorSpec::product(colorSpec::D65.1nm, spec_camera, colorSpec::xyz1931.1nm, wave='auto' )
 
+
 #calculating the L*a*b* parameters using a D65 illuminant
 spec_camera_lab<-spacesXYZ::LabfromXYZ( spec_camera_xyz/100, spacesXYZ::standardXYZ( 'D65' ))
 
-#TO_DO section for the HUE and Chroma calculations
+#converting to dataframe
+spec_camera_lab <- as.data.frame(spec_camera_lab)
 
 
+#chroma
+chroma<-spacesXYZ::LCHabfromLab(c(spec_camera_lab$L,spec_camera_lab$a, spec_camera_lab$b))
+
+#converting to dataframe
+chroma <- as.data.frame(chroma)
+
+#converting to dataframe
+spec_camera_xyz <- as.data.frame(spec_camera_xyz)
+
+
+spec_camera<-as.data.frame(spec_camera)
+names(spec_camera)<-c("wl","spectra")
 
 #output section
-output<-list(as.data.frame(spec_camera),spec_camera_xyz,spec_camera_lab)
+output<-list(spec_camera,spec_camera_xyz,
+             spec_camera_lab,chroma)
 
-names(output) <- c("data","xyz","lab")
+names(output) <- c("data","xyz","lab","chroma")
 
 return(output)
 
