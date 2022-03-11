@@ -2,3 +2,4 @@
 
 export(lab_function)
 export(lab_raster)
+export(lch_raster)

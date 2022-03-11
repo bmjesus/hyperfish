@@ -12,7 +12,9 @@ VignetteBuilder: knitr
 Imports:
   raster,
   colorSpec,
-  spacesXYZ
+  spacesXYZ,
+  snow
 Collate: 
     'labfunctions.R' 
-    'rasterfunctions.R' 
+    'rasterfunctions.R'
+    'lch_raster.R'
