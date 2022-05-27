@@ -13,8 +13,16 @@ Imports:
   raster,
   colorSpec,
   spacesXYZ,
-  snow
+  snow,
+  sp,
+  writexl,
+  readxl,
+  tibble
 Collate: 
     'labfunctions.R' 
     'rasterfunctions.R'
     'lch_raster.R'
+    'reflectance_color_indices.R'
+    'extract_stats.R'
+    'process_lab_lch_folder.R'
+    'compile_parameters_table.R'
